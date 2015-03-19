@@ -78,6 +78,9 @@ function [] = VC_Model(filename, years, type)
     display(['Model parameters a = ' num2str(a)]);
     display(['Maximum error = ' num2str(max(eps))]);
     display(['Mean error = ' num2str(mean(eps))]);
+    mean(eps)/min(P)
+    mean(eps)/max(P)
+    mean(eps)/mean(P)
     % vaccination
     P_vc = modelVC(a, 1, 2, 1, 0.85);
     z = P_vc ./ P;
