@@ -4,14 +4,13 @@
 	\maketitlepage[1]	
 	{Чисельно-аналітичне моделювання}
 	{Математичне моделювання захворюваності на грип та його ускладнень з урахуванням можливої вакцинації населення}
-	{Соловйов~C.~О.}
-	{		&{Сахаров~С.~Ю.,}\\
-			&{Вергун~К.~В.,}\\
-			&{Борисенко~П.~Б.,}\\
-			&{Федченко~О.~А.,}\\
-			&{Дутчак~І.~О.}\\
+	{Соловйов І. О.}
+	{Сахаров С.Ю., \\
+		Вергун К.В., \\
+		Борисенко П.Б., \\
+		Федченко О.А
 	}
-	{КМ-41м}
+	{КМ-41м}{}
 	
 	\tableofcontents
 	
@@ -44,9 +43,9 @@
 
 			Рівні захворюваності вимірюються у кількості хворих на 100000 населення.
 
-			Параметри моделі можуть бути обчислені на основі статистичних даних про рівні захворюваності за допомогою регресійних методів, нейронних мереж, методом опорних векторів тощо.
+			Параметри моделі обчисюються на основі статистичних даних про рівні захворюваності за допомогою регресійних методів, нейронних мереж, методом опорних векторів тощо.
 
-			Може бути ?????? складніша модель, що буде також враховувати випадки захворюваності на пневмонію як ускладнення інших крім грипу ГРВІ. Вона матиме подібний до~\eqref{eq:HIP}, а саме:
+			Можна застовувати складнішу модель, яка буде також враховувати випадки захворюваності на пневмонію як ускладнення інших ГРВІ. Вона матиме подібний до~\eqref{eq:HIP}, а саме:
 			\begin{equation} \label{eq:GHIP}
 				P(I,H,G) = a_1I + a_2H + a_3G + a_4\sqrt{IH} + a_5\sqrt{IG} + a_6\sqrt{GH} + a_7\sqrt[3]{IGH} + a_8,
 			\end{equation}
@@ -100,7 +99,7 @@
 			% TODO: у візіо наїбашити, або вирізати з пдф-ки граф
 			\begin{figure}[!htp]
 				\centering
-				\includegraphics[scale=0.5]{PNG/Динамічна модель.png}
+				\includegraphics[scale=0.5]{PNG/Markov_chain.png}
 				\caption{Динамічна модель захворюваності на грип та його ускладнень}
 				\label{fig:chain_without_vaccinating}
 			\end{figure}
@@ -161,8 +160,8 @@
 		При дослідженні такого роду моделей слід враховувати, що статистичні дані можуть недостатньо точно відображати реальну картину захворюваності. оскільки значна кількість випадків грипу та ГРВІ не реєструється у закладах охорони здоров'я і, відповідно, не потрапляють до жодної статистики, що саме по собі є причиною збільшення похибки моделі.  
 
 	\begin{thebibliography}
-		\bibitem{modeling} Henneman~K. Mathematical modeling of influenza and a secondary bacterial infection / K.~Henneman, D.~Van~Peursem, V.~Huber // WSEAS TRANSACTIONS on BIOLOGY and BIOMEDICINE. --- 2013. --- Vol. 10 --- P. 1--11.
-		\bibitem{interacting} Dang~U. Can Interactions between Timing of Vaccine-Altered Influenza Pandemic Waves and Seasonality in Influenza Complications Lead to More Severe Outcomes? / U.~Dang, C.~Bauch // PLoS ONE. --- 2011. --- Vol. 6 --- P. 1--9.
+		\bibitem{modeling} Henneman~K., Van~Peursem~D., Huber~V. Mathematical modeling of influenza and a secondary bacterial infection / K.~Henneman, D.~Van~Peursem, V.~Huber // WSEAS TRANSACTIONS on BIOLOGY and BIOMEDICINE. --- 2013. --- Vol. 10 --- P. 1--11.
+		\bibitem{interacting} Dang~U., Bauch~C. Can Interactions between Timing of Vaccine-Altered Influenza Pandemic Waves and Seasonality in Influenza Complications Lead to More Severe Outcomes? / U.~Dang, C.~Bauch // PLoS ONE. --- 2011. --- Vol. 6 --- P. 1--9.
 	\end{thebibliography}
 	
 	\append{Вихідні коди}

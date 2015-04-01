@@ -33,7 +33,7 @@
 % \append{назва}
 
 % 1. Ідентифікуємо клас
-\ProvidesClass{labs}[2014/06/11 v2.2 Клас для написання звітів за ДСТУ 3008-95]
+\ProvidesClass{thesis}[2014/06/11 v2.2 Клас для написання звітів за ДСТУ 3008-95]
 \NeedsTeXFormat{LaTeX2e} % потрібний формат
 
 % 2. Завантажуємо "батьківський клас"
@@ -368,7 +368,7 @@
 
 % нова команда для титульного аркушу
 % можливо, необхідно доопрацювати
-\newcommand{\maketitlepage}[6][]{
+\newcommand{\maketitlepage}[7][]{
 	  \thispagestyle{empty}
 	  \setlength{\parindent}{0cm}
 		\begin{center} % центрування
@@ -386,30 +386,28 @@
 			
 			\setfontsize{14pt}
 
-			\MakeUppercase{Практична робота  \ifstrempty{#1}{}{\No~{#1}}}
+			\MakeUppercase{Звіт із лабораторної роботи \ifstrempty{#1}{}{\No~{#1}}}
 
-			за дисципліною \invcommas{#2}
+			з дисципліни
 
-			\MakeUppercase{#3}
+			\invcommas{#2}
+
+			на тему
+
+			{#3}
 			
 		\end{center}
 
 		\vfill % невеликий відступ
 		
 		{\renewcommand{\arraystretch}{1.0}
-		\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
-			& Виконали:\\
-			& студенти групи #6\\
-			#5
-			&\\
-			& Прийняв:\\
-			& доцент кафедри прикладної математики,\\
-			& кандидат біологічних наук\\
-			& {#4}\\
-			&\\
- 			& Оцінка на захисті \_\_\_\_\_\_\_\_\_\_\_\_\_\\
-		\end{tabular*}
-		}
+		\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+			Виконав: & Керівник: \\
+			студент групи {#6} & {#4} \\
+			{#5} & \\
+			\_\_\_\_\_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_\_\_\_\_\\
+			& \ifstrempty{#7}{\today}{#7} \\
+		\end{tabular*}}
 		
 		\vfill % автоматично заповнюємо проміжок
 
