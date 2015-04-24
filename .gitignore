@@ -108,3 +108,4 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 desktop.ini
+Thumbs.db
